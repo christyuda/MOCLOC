@@ -20,8 +20,6 @@ class _truslocState extends State<trusloc> {
   void initState() {
     super.initState();
     requestLocationPermission();
-    // input seconds into parameter for getting location with repeating by timer.
-    // this example set to 5 seconds.
     TrustLocation.start(5);
     getLocation();
   }
@@ -52,6 +50,15 @@ class _truslocState extends State<trusloc> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('LOKASI MOCK CUI BY YUDA'),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            requestLocationPermission();
+            TrustLocation.start(5);
+            getLocation();
+          },
+          backgroundColor: Colors.green,
+          child: const Icon(Icons.navigation),
         ),
         body: Padding(
           padding: const EdgeInsets.all(20.0),
