@@ -1,27 +1,61 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutterloc/home_screen.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:flutterloc/getcurrentlocation.dart';
-import 'package:flutterloc/trustloc.dart';
+import 'package:flutterloc/Loginscreen.dart';
+import 'Onboarding.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer(const Duration(seconds: 3), openOnBoard);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        decoration: const BoxDecoration(
+            image: DecorationImage(image: AssetImage('asset/images/bg.png'))),
+        child: Center(
+            child: Container(
+          height: 300,
+          width: 300,
+          decoration: const BoxDecoration(
+              image:
+                  DecorationImage(image: AssetImage('asset/images/logo.png'))),
+        )),
       ),
-      home: trusloc(),
+    );
+  }
+
+  void openOnBoard() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => loginapp()),
     );
   }
 }

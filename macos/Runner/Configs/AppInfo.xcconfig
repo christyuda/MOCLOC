@@ -8,7 +8,7 @@
 PRODUCT_NAME = flutterloc
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterloc
+PRODUCT_BUNDLE_IDENTIFIER = com.ulbi.ac.id;
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2022 com.example. All rights reserved.

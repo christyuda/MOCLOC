@@ -35,7 +35,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.5
   get: ^4.6.5
   google_maps_flutter: ^2.2.1
   geolocator: ^9.0.2
@@ -44,6 +44,19 @@ dependencies:
   permission_handler: ^10.2.0
   location: ^4.4.0
   location_permissions: ^4.0.1
+  flutter_svg: ^1.1.6
+  font_awesome_flutter: ^10.3.0
+  fluttertoast: ^8.1.2
+  http: ^0.13.5
+  shared_preferences: ^2.0.15
+  dio: ^4.0.6
+  google_fonts: ^3.0.1
+  loading_animation_widget: ^1.2.0+4
+  flutter_launcher_icons: ^0.11.0
+  rename: ^2.0.1
+  json_annotation: ^4.7.0
+  build_runner: ^2.3.3
+  json_serializable: ^6.5.4
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +68,10 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/image/app_logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -68,7 +85,13 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
+  assets:
+      - asset/images/
+      - asset/icons/
+      - asset/
+      - assets/image/
+      
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
@@ -83,7 +106,30 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: roboto
+      fonts:
+        - asset: asset/font/RobotoSlab-Regular.ttf
+    - family: roboto
+      fonts:
+        - asset: assets/font/avenir.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+    - family: sfpro
+      fonts:
+        - asset: asset/font/FontsFree-Net-SFProText-Regular.ttf
+    
+    - family: Cairo
+      fonts:
+        - asset: asset\font\Cairo\Cairo-Regular.ttf 
+        - asset: asset\font\Cairo\Cairo-SemiBold.ttf
+          weight: 600
+        - asset: asset\font\Cairo\Cairo-Bold.ttf
+          weight: 700
+        - asset: asset\font\Cairo\Cairo-Black.ttf
+          weight: 900
+          
+          
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
